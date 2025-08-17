@@ -1,0 +1,69 @@
+:root {
+  --bg: #0b1721;
+  --card: #101e2b;
+  --text: #e8f1f9;
+  --muted: #aac0d4;
+  --brand: #3ecf8e;
+  --brand-2: #2bb2d6;
+  --accent: #ffe28a;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: linear-gradient(180deg, #07121a, #0c1a25 40%, #0b1721); }
+img { max-width: 100%; height: auto; border-radius: 12px; }
+a { color: var(--brand-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { width: min(1100px, 92vw); margin: 0 auto; padding: 24px; }
+
+/* Header / Nav */
+.site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: rgba(7,18,26,.6); border-bottom: 1px solid rgba(255,255,255,.06); }
+.navbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .3px; }
+.brand .logo { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%); box-shadow: var(--shadow); }
+.nav { display: flex; align-items: center; gap: 10px; }
+.nav a, .nav button { color: var(--text); padding: 10px 14px; border-radius: 12px; border: 0; background: transparent; cursor: pointer; font-weight: 600; }
+.nav a.active { background: rgba(255,255,255,.06); }
+.dropdown { position: relative; }
+.dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 240px; background: var(--card); border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 8px; display: none; box-shadow: var(--shadow); }
+.dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu { display: block; }
+.dropdown-menu a { display: block; padding: 10px 12px; border-radius: 10px; }
+.dropdown-menu a:hover { background: rgba(255,255,255,.06); }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; border-radius: 20px; background: radial-gradient(1200px 400px at 50% -10%, rgba(62,207,142,.25), transparent 60%); }
+.hero-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: center; padding: 26px; }
+.hero .badge { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(62,207,142,.15); color: var(--brand); font-weight: 700; letter-spacing: .3px; }
+.hero h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 8px 0 10px; }
+.hero p { color: var(--muted); }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.btn { display: inline-block; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.04); color: var(--text); font-weight: 700; }
+.btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: 0; box-shadow: var(--shadow); }
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.card { grid-column: span 12; background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); }
+.card h3 { margin-top: 8px; }
+
+@media (min-width: 760px){
+  .card.span-6 { grid-column: span 6; }
+  .card.span-4 { grid-column: span 4; }
+}
+
+/* Footer */
+footer { margin-top: 60px; border-top: 1px solid rgba(255,255,255,.08); }
+.footer-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; padding: 24px 0; }
+.footer-col { grid-column: span 12; color: var(--muted); }
+@media (min-width: 760px){ .footer-col { grid-column: span 4; } }
+.small { font-size: 0.9rem; color: var(--muted); }
+.notice { background: rgba(255,255,255,.04); border: 1px dashed rgba(255,255,255,.1); padding: 10px 12px; border-radius: 12px; }
+figure { margin: 0; }
+figcaption { color: var(--muted); font-size: .9rem; margin-top: 6px; }
+
+/* Tables */
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { border-bottom: 1px solid rgba(255,255,255,.07); padding: 10px; text-align: left; }
+.table th { color: var(--muted); font-weight: 600; }
+
+/* Utilities */
+.mt-2{margin-top:12px} .mt-3{margin-top:18px} .mt-4{margin-top:24px} .mt-6{margin-top:36px}
+.center { text-align:center; }
