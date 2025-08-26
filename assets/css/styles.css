@@ -43,7 +43,7 @@ a:hover { color: var(--blue); }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(8px);
-  background: rgba(167, 255, 167, 0.61); /* forest w/ transparency */
+  background: #a7ffa79c; /* forest w/ transparency */
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
 .navbar {
@@ -439,7 +439,7 @@ font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, "Helvetic
   margin-top: 30px;
   padding: 40px 20px;
   text-align: center;
-  background: rgba(0, 128, 0, 0.2); /* green wash, transparent */
+  background: #00800033; /* green wash, transparent */
   border-radius: 12px;
 }
 
@@ -895,3 +895,432 @@ footer {
   }
 }
 
+.food-page {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.food-page h1 {
+  font-size: 2rem;
+  color: #2a5d2a;
+  margin-bottom: 10px;
+}
+
+.food-page-description {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #2F4F4F;
+  line-height: 1.8;       /* more spacious lines */
+}
+
+/* Top row: grid */
+.top-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+/* Bottom row: flex */
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Food cards */
+.food-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.food-card img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.food-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #2F4F4F;
+}
+
+.food-card p {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  color: var(--forest, #2F4F4F);
+  font-size: 1.2rem;      /* bigger text */
+  line-height: 1.8;       /* more spacious lines */
+}
+
+.food-card strong {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  color: var(--forest, #2F4F4F);
+  font-weight: 700;
+  font-size: 1.25rem;     /* emphasize keywords a little more */
+}
+
+/* Hover effect */
+.food-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .top-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottom-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* ===== FESTIVAL PAGE ONLY ===== */
+.festival-page {
+  padding: 40px 0;
+  text-align: center; /* center everything inside by default */
+}
+
+/* Page Header */
+.festival-page h1 {
+  font-size: 2rem;
+  color: #2F4F4F;
+  margin-bottom: 10px;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+}
+
+/* Intro Text */
+.festival-page .intro-text {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 1.2rem;
+  color: var(--forest, #2F4F4F);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 900px;   /* keeps text from going too wide */
+  margin-left: auto;
+  margin-right: auto; /* centers block */
+}
+
+/* Festival Banner */
+.festival-banner {
+  max-width: 1000px;
+  margin: 0 auto 25px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.festival-banner img {
+  width: 100%;  /* keep image proportional and centered */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* slight shadow for pop */
+}
+
+/* Festival Description */
+.festival-description {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  padding: 15px;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--forest, #2F4F4F);
+  text-align: center; /* centered text */
+}
+
+/* General Paragraphs */
+.festival-page p {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  color: var(--forest, #2F4F4F);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 20px auto; /* space between paragraphs */
+}
+/* Strong tag for emphasis */
+.festival-page strong {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  color: var(--forest, #2F4F4F);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* ===== Accommodations Page Only ===== */
+.accommodations-page {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+}
+
+/* Hero Banner */
+.accommodations-page .hero-banner {
+  width: 100%;
+  height: 60vh; /* thinner height */
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.accommodations-page .hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section Header */
+
+.accommodations-page .accommodation-header h1 {
+  position: relative;
+  display: inline-block; /* shrink-wraps the underline */
+  font-size: 2.2rem;
+  margin: 0 auto 20px; /* centers the element */
+  color: #88A27C;
+}
+
+.accommodations-page .accommodation-header {
+  text-align: center; /* keeps header text centered */
+}
+
+.accommodations-page .accommodation-header h1::after {
+  content: "";
+  display: block;
+  width: 60%; /* underline length (adjust as needed) */
+  height: 3px;
+  background-color: #88A27C;
+  margin: 8px auto 0; /* centers underline under text */
+  border-radius: 2px;
+}
+
+
+.accommodations-page .accommodation-header p {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0 auto 20px; /* keeps it centered */
+  padding: 0 5x; /* <-- adds space left & right */
+  max-width: 1000px; /* <-- prevents text from stretching too wide on big screens */
+  color: #2F4F4F;
+}
+
+.accommodations-page .accommodation-header strong{
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  color: var(--forest, #2F4F4F);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Cabin Cards */
+.accommodations-page .cabin-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.accommodations-page .card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 750px; /* increased from before to make images taller */
+}
+
+.accommodations-page .card img {
+  width: 100%;
+  height: 75%;        /* keeps tall cabins visible without taking full screen */
+  object-fit: cover;    /* crops neatly */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.accommodations-page .card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.3rem;
+  color: #88A27C;
+}
+
+.accommodations-page .card p {
+  font-size: 1rem;
+  color: #2F4F4F;
+  padding: 0 12px 16px;
+  line-height: 1.5;
+}
+
+/* Rainy Day Promo */
+.accommodations-page .rainy-promo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  margin: 50px 20px 0;
+}
+
+.accommodations-page .rainy-promo .promo-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.accommodations-page .rainy-promo .promo-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.accommodations-page .rainy-promo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #2F4F4F;
+}
+
+.accommodations-page .rainy-promo p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #2F4F4F;
+}
+
+/* Card hover effect */
+.accommodations-page .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.accommodations-page .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Namespace so styles only affect About Page */
+.about-page {
+  font-family: Arial, sans-serif;
+  color: #2F4F4F;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Hero Section */
+.about-page .about-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.about-page .about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.about-page .about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Company Story */
+.about-page .company-story .story-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.about-page .company-story .story-image img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+.about-page .company-story .story-text {
+  flex: 1;
+}
+.about-page .company-story h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.about-page .company-story p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Vision & Mission */
+.about-page .vision-mission {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.about-page .vision-mission h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.about-page .vision-mission .vm-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-page .vision-mission .vm-box {
+  flex: 1 1 300px;
+  background: #f0fff09c; /* sand background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-page .vision-mission .vm-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+.about-page .vision-mission .vm-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2f4f4f;
+}
+.about-page .vision-mission .vm-box p {
+  line-height: 1.9; /* better spacing */
+  font-weight: 400;
+  color: #333;
+}
+
+/* Company Details */
+.about-page .company-details {
+  text-align: center;
+}
+.about-page .company-details h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about-page .company-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.about-page .company-details ul li {
+  line-height: 1.8;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.about-page .company-details .wordmark img {
+  width: 300px;
+  margin-top: 10px;
+}
