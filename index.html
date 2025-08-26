@@ -1,40 +1,36 @@
-<!-- Common Head Meta -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
-<link rel="stylesheet" href="assets/css/styles.css" />
-<script defer src="assets/js/main.js"></script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cdefs/%3E%3Ccircle cx='32' cy='32' r='28' fill='%232bb2d6'/%3E%3Cpath d='M18 36c8-2 14-10 18-18 8 12 9 26-2 32-7 4-14 2-16-14z' fill='%233ecf8e'/%3E%3C/svg%3E" />
-
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Discover Siniloan | Waterfalls, Culture, and Local Stays</title>
-  <meta name="description" content="Explore Siniloan, Laguna: Buruwisan Falls and Mt. Romelo treks, rich local culture, and peaceful farm stays." />
-
-  <!-- Common head -->
-  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+  <meta name="description" content="Explore Siniloan, Laguna: waterfalls like Buruwisan and Diwata Falls, the Guilingan Festival, local delicacies, and cozy farm accommodations." />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"TouristDestination","name":"Siniloan, Laguna","description":"Waterfall treks at Mt. Romelo and rich local culture.","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Buruwisan_Falls.jpg/1024px-Buruwisan_Falls.jpg","url":"https://example.com/"}
-  </script>
+  <link rel="icon" href="assets/images/Church.png" type="image/png" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container navbar">
-      <div class="brand"><span class="logo"></span> <a href="/index.html" style="color:inherit;text-decoration:none">Discover Siniloan</a></div>
+<div class="brand">
+  <!-- First logo image -->
+  <img src="assets/images/SiniloveanLogo.png" alt="Logo Icon" class="logo-img">
+  <!-- Word logo (Discover Siniloan text turned into an image) -->
+  <img src="assets/images/Sinilovean.png" alt="Word Logo" class="logo-word">
+</div>
       <button id="menuToggle" class="btn" style="display:none">Menu</button>
       <nav id="menu" class="nav">
-        <a href="/index.html">Home</a>
+        <a href="/index.html" class="active">Home</a>
         <a href="/destinations.html">Destinations</a>
         <div class="dropdown">
           <button class="btn">Culture ▾</button>
           <div class="dropdown-menu">
             <a href="/culture/history.html">History</a>
             <a href="/culture/food.html">Food</a>
-            <a href="/culture/traditions.html">Traditions</a>
             <a href="/culture/festivals.html">Festivals</a>
           </div>
         </div>
@@ -45,65 +41,235 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero mt-4">
-      <div class="hero-inner">
-        <div>
-          <span class="badge">Laguna, Philippines</span>
-          <h1>Waterfall sanctuary, friendly town energy</h1>
-          <p>Siniloan sits between the Sierra Madre and Laguna de Bay. Trek Mt. Romelo to Buruwisan Falls, learn local traditions, and wind down at a cozy farm stay.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="/destinations.html">Explore destinations</a>
-            <a class="btn" href="/accommodations.html">Stay at PasEla Farm</a>
-          </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero mt-4 scroll-fade">
+  <div class="hero-slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="assets/images/Buruwisan_Falls.png" alt="Buruwisan Falls in Siniloan">
+        <div class="caption">
+          <h2>Buruwisan Falls</h2>
+          <p>The crown jewel of Mt. Romelo, standing 180 ft tall.</p>
+          <a class="btn primary" href="/destinations.html">Explore Destinations</a>
         </div>
-        <figure>
-          <img src="assets/images/falls.jpg" alt="Buruwisan Falls in Siniloan, Laguna"/>
-          <figcaption>Buruwisan Falls by Dionisia.besas, CC BY‑SA 4.0 (via Wikimedia Commons).</figcaption>
-        </figure>
       </div>
-    </section>
-
-    <section class="grid mt-6">
-      <article class="card span-6">
-        <h3>Mt. Romelo Treks</h3>
-        <p>Beginner-friendly trails leading to multiple falls and river pools. Go with a local guide for safety and to keep trails clean. <span class="small">Source: community hiking guides.</span></p>
-        <a class="btn" href="/destinations.html">See destinations</a>
-      </article>
-      <article class="card span-6">
-        <h3>Culture & Food</h3>
-        <p>From parish fiestas to kakanin after a hike, Siniloan blends Sierra Madre flavors with lakeside produce.</p>
-        <a class="btn" href="/culture/food.html">Taste & traditions</a>
-      </article>
-      <article class="card span-6">
-        <h3>PasEla Farm Stay</h3>
-        <p>Small, quiet cabins ideal for student groups or families. Karaoke, bonfire, and mountain air. Book early on weekends.</p>
-        <a class="btn" href="/accommodations.html">View details</a>
-      </article>
-      <article class="card span-6">
-        <h3>Plan Your Trip</h3>
-        <p>Van from Manila, bus to Famy or Siniloan, then tricycle. See our map and options.</p>
-        <a class="btn" href="/directions.html">Get directions</a>
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <strong>Discover Siniloan</strong>
-        <div class="small">A student-led tourism promotion project highlighting natural sceneries, culture, and local experiences in Siniloan, Laguna.</div>
+      <div class="slide">
+        <img src="assets/images/PasEla_Farm.png" alt="PasEla Farm in Siniloan">
+        <div class="caption">
+          <h2>PasEla Farm</h2>
+          <p>Relax and unwind in nature with cozy farm stays.</p>
+          <a class="btn primary" href="/accommodations.html">Book a Stay</a>
+        </div>
       </div>
-      <div class="footer-col">
-        <div class="small">Images used under Creative Commons. Please see per-image captions for author and license links.</div>
-        <div class="small">© <span id="year"></span> Discover Siniloan. Educational use.</div>
-      </div>
-      <div class="footer-col">
-        <div class="small">Built with plain HTML, CSS, and a sprinkle of JS. OpenStreetMap for maps.</div>
+      <div class="slide">
+        <img src="assets/images/Guilingan_Festival.png" alt="Guilingan Festival Siniloan">
+        <div class="caption">
+          <h2>Guilingan Festival</h2>
+          <p>Celebrate local culture and heritage through vibrant festivities.</p>
+          <a class="btn primary" href="/culture/festivals.html">Learn More</a>
+        </div>
       </div>
     </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </footer>
+    <div class="pagination"></div>
+  </div>
+</section>
+
+    <!-- Destinations Section -->
+   <section id="destinations">
+  <div class="destinations-carousel scroll-fade">
+      <h2 class="section-header">Explore Siniloan’s Destinations</h2>
+    <div class="carousel-track">
+      <div class="card">
+        <img src="assets/images/Buruwisan_Falls.png" alt="Buruwisan Falls">
+        <h3>Buruwisan Falls</h3>
+        <p>A 180-ft waterfall and the most popular trek in Siniloan.</p>
+        <button class="cta" onclick="window.location.href='/destinations.html'">Explore</button>
+      </div>
+      <div class="card">
+        <img src="assets/images/Batya_Batya_Falls.png" alt="Batya-Batya Falls">
+        <h3>Batya-Batya Falls</h3>
+        <p>A hidden twin waterfall surrounded by lush forest trails.</p>
+        <button class="cta" onclick="window.location.href='/destinations.html'">Explore</button>
+      </div>
+      <div class="card">
+        <img src="assets/images/Diwata_Falls.png" alt="Diwata Falls">
+        <h3>Diwata Falls</h3>
+        <p>A mystical cascade tucked away in Mt. Romelo.</p>
+        <button class="cta" onclick="window.location.href='/destinations.html'">Explore</button>
+      </div>
+      <div class="card">
+        <img src="assets/images/Sampaloc_Falls.png" alt="Sampaloc Falls">
+        <h3>Sampaloc Falls</h3>
+        <p>A secluded gem for adventurous hikers.</p>
+        <button class="cta" onclick="window.location.href='/destinations.html'">Explore</button>
+      </div>
+      <div class="card">
+        <img src="assets/images/Tulay_na_Bato_Falls.png" alt="Tulay na Bato Falls">
+        <h3>Tulay na Bato Falls</h3>
+        <p>Unique rock formations with a natural stone bridge.</p>
+        <button class="cta" onclick="window.location.href='/destinations.html'">Explore</button>
+      </div>
+    </div>
+    <!-- Nav arrows -->
+    <button class="carousel-btn prev">‹</button>
+    <button class="carousel-btn next">›</button>
+  </div>
+</section>
+
+
+<!-- Food Collage (5 images with center image) -->
+ <div class="food-section scroll-fade">
+    <h2 class="section-header">Discover Siniloan’s Food</h2>
+<div class="food-collage">
+  <div class="food-img img1"><img src="assets/images/Buko_Pie.png" alt="Buko Pie"></div>
+  <div class="food-img img2"><img src="assets/images/Cassava_Cake.png" alt="Cassava Cake"></div>
+  <div class="food-img img5"><img src="assets/images/Kesong_Puti.png" alt="Kesong Puti"></div>
+  <div class="food-img img3"><img src="assets/images/Sinukmani.png" alt="Sinukmani"></div>
+  <div class="food-img img4"><img src="assets/images/Uraro.png" alt="Uraro"></div>
+</div>
+
+    <!-- Food Description -->
+<div class="food-description">
+  <p>
+   Siniloan’s culinary heritage shines through its beloved treats. 
+    <strong>Buko Pie</strong>, a flaky pastry filled with tender young coconut, 
+    offers a sweet and creamy indulgence. 
+    <strong>Cassava Cake</strong>, made from grated cassava and coconut milk, 
+    delights with its soft, chewy texture and golden top. 
+    <strong>Kesong Puti</strong>, a fresh and slightly salty white cheese, 
+    reflects the town’s farming traditions and pairs perfectly with local bread. 
+    To complete the feast, <strong>Sinukmani</strong>, a sticky rice cake 
+    cooked in coconut milk and sugar, is often shared during gatherings as 
+    a symbol of togetherness — and many more delights await, such as 
+    <strong>Uraro cookies</strong>, best discovered in the local market or on our 
+    <a href="/culture/food.html" class="cta-inline">Food page</a>.
+  </p>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="food-cta">
+  <div class="cta-content">
+    <h2>Discover More Local Delicacies</h2>
+    <p>Explore the full range of Siniloan's traditional treats and flavors on our dedicated food page.</p>
+    <a href="/culture/food.html" class="cta-button">See All Foods</a>
+  </div>
+</div>
+<!-- Culture Section Header -->
+<div class="culture-section scroll-fade">
+  <h2 class="culture-header">Explore Siniloan’s Culture</h2>
+
+<div class="culture-cards">
+  <div class="culture-card">
+    <img src="assets/images/Guilingan_Festival.png" alt="Guilingan Festival">
+    <h3>Guilingan Festival</h3>
+    <p>A celebration of Siniloan’s agricultural roots with music, dance, and parades.</p>
+    <a class="btn" href="/culture/festivals.html">Learn More</a>
+  </div>
+
+  <div class="culture-card">
+    <img src="assets/images/Church.png" alt="St. Peter and Paul Parish Church">
+    <h3>St. Peter and Paul Parish Church</h3>
+    <p>A historical landmark in Siniloan, blending faith and cultural heritage.</p>
+    <a class="btn" href="/culture/history.html">Read More</a>
+  </div>
+
+  <div class="culture-card">
+    <img src="assets/images/History.png" alt="History of Siniloan">
+    <h3>History of Siniloan</h3>
+    <p>Discover the story of how Siniloan grew between the mountains and the lake.</p>
+    <a class="btn" href="/culture/history.html">Explore</a>
+  </div>
+</div>
+</div>
+
+<!-- Accommodations Section -->
+<section id="accommodations" class="accommodations-section scroll-fade">
+  <h2 class="section-header">Stay in Siniloan</h2>
+
+  <div class="accommodation-card">
+    <div class="accommodation-image">
+      <img src="assets/images/PasEla_Farm.png" alt="PasEla Farm stay in Siniloan">
+    </div>
+    <div class="accommodation-info">
+      <h3>PasEla Farm</h3>
+      <p>Experience farm-to-table lodging in Siniloan, with fresh air, nature, and local produce. Rooms start at just ₱1,500 per night.</p>
+      <a href="/accommodations/pasela.html" class="cta-button">Book Now</a>
+    </div>
+  </div>
+</section>
+
+
+  <section id="how-to-get-here" padding: 60px 20px;">
+  <div class="container">
+    <!-- Section Header -->
+    <h2 class="section-header">How to Get Here</h2>
+ <p>Siniloan, Laguna is easily accessible from Metro Manila and nearby provinces. 
+     Use the interactive map below to navigate your route.</p>
+    <!-- Google Maps Embed -->
+    <div style="margin-top: 30px; display: flex; justify-content: center;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.815936232269!2d121.4336!3d14.4191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d736e154fc33%3A0xb0c9a4cf4e73d7!2sSiniloan%2C%20Laguna!5e0!3m2!1sen!2sph!4v1692960000000!5m2!1sen!2sph" 
+        width="100%" 
+        height="450" 
+        style="border:0; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="container footer-grid">
+    <!-- Project Identity -->
+    <div class="footer-col">
+      <strong>Discover Siniloan</strong>
+      <div class="small">
+        A student-led tourism promotion project highlighting natural sceneries, culture, and local experiences in Siniloan, Laguna.
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <strong>Quick Links</strong>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Accommodations</a></li>
+        <li><a href="#">Directions</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact / Attribution -->
+    <div class="footer-col">
+      <div class="small">Images provided by the client’s official image bank for educational purposes.</div>
+      <div class="small">© <span id="year"></span> Discover Siniloan. Educational use.</div>
+      <div class="small">Made by SiniLOVEan for STI College Novaliches.</div>
+
+      <!-- Placeholder Social Icons -->
+      <div class="social-icons">
+        <a href="#"><span>🌐</span></a>
+        <a href="#"><span>🐦</span></a>
+        <a href="#"><span>📘</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
 </body>
 </html>
