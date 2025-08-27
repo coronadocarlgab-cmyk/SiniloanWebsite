@@ -3,12 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discover Siniloan | Waterfalls, Culture, and Local Stays</title>
-  <meta name="description" content="Explore Siniloan, Laguna: waterfalls like Buruwisan and Diwata Falls, the Guilingan Festival, local delicacies, and cozy farm accommodations." />
+  <title>Discover Siniloan | Directions</title>
+  <meta name="description" content="Find directions to Siniloan, Laguna using our interactive map powered by OpenStreetMap." />
+   <!-- Leaflet core -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Your site CSS + JS -->
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
+
   <link rel="icon" href="assets/images/SiniloveanLogo.png" type="image/png" />
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
 </head>
 
@@ -16,15 +22,13 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container navbar">
-<div class="brand">
-  <!-- First logo image -->
-  <img src="assets/images/SiniloveanLogo.png" alt="Logo Icon" class="logo-img">
-  <!-- Word logo (Discover Siniloan text turned into an image) -->
-  <img src="assets/images/Sinilovean.png" alt="Word Logo" class="logo-word">
-</div>
+      <div class="brand">
+        <img src="assets/images/SiniloveanLogo.png" alt="Logo Icon" class="logo-img">
+        <img src="assets/images/Sinilovean.png" alt="Word Logo" class="logo-word">
+      </div>
       <button id="menuToggle" class="btn" style="display:none">Menu</button>
       <nav id="menu" class="nav">
-        <a href="/index.html" class="active">Home</a>
+        <a href="/index.html">Home</a>
         <a href="/destinations.html">Destinations</a>
         <div class="dropdown">
           <button class="btn">Culture ▾</button>
@@ -35,85 +39,111 @@
           </div>
         </div>
         <a href="/accommodations.html">Accommodations</a>
-        <a href="/directions.html">Directions</a>
+        <a href="/directions.html" class="active">Directions</a>
         <a href="/about.html">About</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1>Directions</h1>
+<div class="directions-page">
+    <header>
+      <h1>Directions to Siniloan</h1>
+    </header>
 
-    <div class="grid mt-4">
-      <article class="card span-6">
-        <h3>From Metro Manila (public)</h3>
-        <ul>
-          <li>Bus or van to Famy/Siniloan (via Rizal or via SLEX to Laguna hub), then tricycle to town or jump‑off.</li>
-          <li>Allow 3–4 hours depending on traffic and weather.</li>
-        </ul>
-      </article>
-      <article class="card span-6">
-        <h3>By private vehicle</h3>
-        <ul>
-          <li>Via Rizal lake road or SLEX–Calamba–Pagsanjan corridor, then east to Siniloan.</li>
-          <li>Check road conditions during rainy months.</li>
-        </ul>
-      </article>
-    </div>
+    <div class="directions-layout">
+      <!-- Map Section -->
+      <div id="map"></div>
 
-    <div class="card mt-4">
-      <h3>Map</h3>
-      <p class="small">OpenStreetMap embed centered near Siniloan town proper.</p>
-      <iframe title="Siniloan Map" width="100%" height="420" style="border:1px solid rgba(255,255,255,.1); border-radius:14px" src="https://www.openstreetmap.org/export/embed.html?bbox=121.425%2C14.40%2C121.48%2C14.455&layer=mapnik&marker=14.425%2C121.45"></iframe>
-      <p class="small mt-2">Open map in a new tab: <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=14.425&mlon=121.45#map=14/14.4250/121.4500">OpenStreetMap</a></p>
-    </div>
-  </main>
+      <!-- Text + Form Section -->
+      <div class="directions-content">
+        <h2>About Siniloan</h2>
+        <p>
+          Siniloan is located between the plains of the Sierra Madre Mountains and Laguna de Bay. 
+          It is bordered by the municipality of Mabitac to the west, Pañguil to the east, Real, Quezon to the north, 
+          and Laguna de Bay to the south. The town of Fámy, once a small barrio of Siniloan known as Barrio Calumpang, 
+          became a separate municipality in 1910, while Mabitac, also formerly a barrio of Sinilóan, was separated much 
+          earlier in 1613. Flowing through the center of the town is the Río Romelo, which serves as both a fishing ground 
+          and a source of irrigation. The town proper is situated about 84 kilometers (52 miles) from Manila via Manila East Road 
+          or Marcos Highway, and roughly 113 kilometers (70 miles) via the South Luzon Expressway through Santa Cruz.
+        </p>
 
-<!-- Footer -->
-<footer>
-  <div class="container footer-grid">
-    <!-- Project Identity -->
-    <div class="footer-col">
-      <strong>Discover Siniloan</strong>
-      <div class="small">
-        A student-led tourism promotion project highlighting natural sceneries, culture, and local experiences in Siniloan, Laguna.
-      </div>
-    </div>
+        <h2>Get Directions</h2>
+        <p>Enter your starting location to see directions to Siniloan, Laguna on Google Maps.</p>
 
-    <!-- Quick Links -->
-    <div class="footer-col">
-      <strong>Quick Links</strong>
-      <ul class="footer-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">Accommodations</a></li>
-        <li><a href="#">Directions</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact / Attribution -->
-    <div class="footer-col">
-      <div class="small">Images provided by the client’s official image bank for educational purposes.</div>
-      <div class="small">© <span id="year"></span> Discover Siniloan. Educational use.</div>
-      <div class="small">Made by SiniLOVEan for STI College Novaliches.</div>
-
-      <!-- Placeholder Social Icons -->
-      <div class="social-icons">
-        <a href="#"><span>🌐</span></a>
-        <a href="#"><span>🐦</span></a>
-        <a href="#"><span>📘</span></a>
+        <form id="gmaps-form">
+          <input type="text" id="start-location" placeholder="Enter your starting location" required>
+          <button type="submit" class="gmaps-btn">Get Directions</button>
+        </form>
       </div>
     </div>
   </div>
 
-  <!-- Back to Top -->
-  <div class="back-to-top">
-    <a href="#top">↑ Back to Top</a>
-  </div>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</footer>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <strong>Discover Siniloan</strong>
+        <div class="small">
+          A student-led tourism promotion project highlighting natural sceneries, culture, and local experiences in Siniloan, Laguna.
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <strong>Quick Links</strong>
+        <ul class="footer-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/destinations.html">Destinations</a></li>
+          <li><a href="/culture/history.html">History</a></li>
+          <li><a href="/culture/food.html">Food</a></li>
+          <li><a href="/culture/festivals.html">Festivals</a></li>
+          <li><a href="/accommodations.html">Accommodations</a></li>
+          <li><a href="/directions.html">Directions</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="small">Images provided by the client’s official image bank for educational purposes.</div>
+        <div class="small">© <span id="year"></span> Discover Siniloan. Educational use.</div>
+        <div class="small">Made by SiniLOVEan for STI College Novaliches.</div>
+      </div>
+    </div>
+
+    <div class="back-to-top">
+      <a href="#top">↑ Back to Top</a>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const siniloanCoords = [14.4231, 121.4515]; 
+      const map = L.map('map').setView(siniloanCoords, 13);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      L.marker(siniloanCoords).addTo(map)
+        .bindPopup('<b>Siniloan, Laguna</b><br>Between the Sierra Madre and Laguna de Bay.')
+        .openPopup();
+
+      // Handle Google Maps directions form
+      const form = document.getElementById("gmaps-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const start = document.getElementById("start-location").value.trim();
+        if (start) {
+          const gmapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(start)}&destination=Siniloan+Laguna`;
+          window.open(gmapsUrl, "_blank");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
